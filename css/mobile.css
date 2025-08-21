@@ -1,0 +1,277 @@
+/* Responsivo */
+@media (max-width: 768px) {
+    
+    /* Header ajustado */
+    *{
+        max-width: 100vw;
+    }
+    .header {
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
+    .header .container {
+        padding: 0 15px;
+        height: 70px; /* Altura reduzida para mobile */
+    }
+
+    .logo img {
+        height: 40px; /* Logo menor em mobile */
+    }
+
+    /* Menu Hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger-line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--primary);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Menu de Navegação Mobile */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.1rem;
+        color: var(--primary);
+    }
+
+    .nav-menu a.active {
+        color: var(--secondary);
+        font-weight: 600;
+    }
+
+    /* Animação do Hamburger para X */
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Efeito de scroll no header */
+    .header.scrolled {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+
+    /* Hero Section - Mobile Optimization */
+    .hero {
+        height: 100vh;
+        min-height: 600px; /* Altura mínima para evitar problemas */
+        padding-top: 70px; /* Espaço para o header */
+        background-attachment: scroll; /* Remover parallax em mobile */
+    }
+
+    .hero-content {
+        margin-top: -100px;
+        width: 100%;
+        max-width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+        font-size: 1.1rem !important;
+        margin-bottom: 1.8rem;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Projetos */
+    .projects {
+        padding: 4rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Quem Somos */
+    .about {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        padding: 1.5rem;
+    }
+
+    /* Contato */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .info-box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info-box i {
+        margin-top: 4px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Rodapé */
+    footer {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+
+    /* Container de paginação */
+    .projects-pagination-container {
+        position: relative;
+    }
+
+    /* Grade de projetos modificada */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Esconder todos os cards inicialmente */
+    .project-card {
+        display: none;
+    }
+
+    /* Mostrar apenas os cards ativos */
+    .project-card.active {
+        display: block;
+    }
+
+    /* Controles de paginação */
+    .pagination-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .pagination-arrow {
+        background: var(--primary);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .pagination-arrow:hover {
+        background: var(--secondary);
+    }
+
+    .pagination-arrow:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .pagination-info {
+        font-size: 1rem;
+        color: var(--primary);
+        font-weight: 500;
+    }
+}
