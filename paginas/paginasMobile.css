@@ -1,0 +1,240 @@
+@media (max-width: 768px) {
+    
+/* Header ajustado */
+    *{
+        max-width: 100vw;
+    }
+    .header {
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
+    .header .container {
+        padding: 0 15px;
+        height: 70px; /* Altura reduzida para mobile */
+    }
+
+    .logo img {
+        height: 40px; /* Logo menor em mobile */
+    }
+
+    /* Menu Hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger-line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--primary);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Menu de Navegação Mobile */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.1rem;
+        color: var(--primary);
+    }
+
+    .nav-menu a.active {
+        color: var(--secondary);
+        font-weight: 600;
+    }
+
+    /* Animação do Hamburger para X */
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Efeito de scroll no header */
+    .header.scrolled {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    /*Info*/
+    .lot-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Menor gap em mobile */
+    }
+    
+    .lot-features {
+        padding: 20px; /* Reduzir padding */
+    }
+    
+    .features-list li {
+        flex-wrap: wrap; /* Permitir quebra de linha */
+    }
+    
+    .feature-name,
+    .feature-value {
+        flex-basis: 100%; /* Forçar ocupar linha completa */
+        padding: 5px 0; /* Espaçamento vertical */
+    }
+    
+    .feature-value {
+        text-align: left; /* Alinhar à esquerda */
+        padding-left: 15px; /* Indentar valores */
+    }
+    
+    .size-card-header {
+        flex-direction: column; /* Empilhar preço e dimensão */
+        align-items: flex-start;
+    }
+    
+    .size-price {
+        font-size: 1.3rem; /* Reduzir tamanho */
+    }
+    
+    .project-hero-content h1{
+        font-size: 2rem;
+        margin-bottom: 100px;
+    }
+
+    .project-hero-content{
+        width: 100vw;
+    }
+
+    .project-hero-content p{
+        display: none;
+    }
+
+    
+
+    .project-meta{
+        flex-direction: column;
+        
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .footer-nav, .footer-contact, .footer-social {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Página Trabalhe Conosco */
+    .trabalhe-wrapper {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .form-left, .form-right {
+        width: 100%;
+    }
+
+    .form-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    /* Seção de Contato */
+    .contact {
+        padding: 4rem 1rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+
+    .form-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .info-box {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .info-box i {
+        font-size: 1.5rem;
+    }
+
+    .info-box p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    
+}
